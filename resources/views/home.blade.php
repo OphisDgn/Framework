@@ -15,6 +15,9 @@
                     @endif
 
                     Coucou !
+                    
+                    <a class="btn btn-dark" href="{{ url('/users') }}" >Gestion compet</a>
+                    <a class="btn btn-dark" href="#" >Users Liste</a>
                 </div>
             </div>
         </div>

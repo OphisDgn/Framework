@@ -10,6 +10,4 @@ class Skill extends Model {
      return $this->belongToMany('App\User')->withPivot('niveau');
    }
 }
-
-
 ?>
