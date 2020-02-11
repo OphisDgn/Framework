@@ -38,7 +38,24 @@ class UsersController extends Controller
         $skis = Skill::all();
         DB::table('skill_user')->insert(['skill_id'=>$request->input('skill'), 'niveau'=>$request->input('niveau'), 'user_id'=>$user->id ]);
         return redirect()->route('users');
+    }
     
+    public function edit(Request $request) 
+    {
+      $user = Auth::user();
+      $ski = $user->skills;
+      $skis = Skill::all();
+      DB::table('skill_user')->where('user_id', $user->id)->where('skill_id', $request->input('skill'))->update(['niveau'=>$request->input('niveau')]);
+      return redirect()->route('users');
+    }
+    
+    public function delete($id)
+    {
+      $user = Auth::user();
+      $ski = $user->skills;
+      $skis = Skill::all();
+      DB::table('skill_user')->where('user_id', $user->id)->where('skill_id', $id)->delete();
+      return redirect()->route('users');
     }
     
 }

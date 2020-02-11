@@ -19,7 +19,7 @@
                         <input type="submit" name="add" value="Ajouter">
                     </form>
                     
-                    <a class="btn btn-dark" href="{{ url('/home') }}">Retour</a>
+                    <a class="btn btn-dark" href="{{ url('/users') }}">Retour</a>
                     
             </div>
         </div>

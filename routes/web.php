@@ -11,6 +11,8 @@
 |
 */
 
+use \App\Skill;
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -30,3 +32,4 @@ Route::get('/users/add', function() {
 })->name('adding');
 
 Route::post('/users/add', 'UsersController@add');
+

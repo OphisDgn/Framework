@@ -12,7 +12,6 @@
                         </div>
                     @endif
                     
-                    
                     <h2> Utilisateurs </h2>
                     <p> Id : {{ $user->id }} </p>
                     <p> First Name : {{ $user->firstname }} </p>
@@ -21,11 +20,9 @@
                     
                     <h2> Competences </h2>
                     
-                    
-                    
-                    <a class="btn btn-dark" href="{{ route('adding') }}"> Ajouter</a>
-                    <a class="btn btn-dark" href="#"> Modifier</a>
-                    <a class="btn btn-dark" href="#"> Supprimer</a>
+                    <a class="btn btn-dark" href="{{ route('adding') }}">Ajouter une competence</a>
+                    <a class="btn btn-dark" href="#">Modifier une competence</a>
+                    <a class="btn btn-dark" href="#">Supprimer une competence</a>
                     <a class="btn btn-dark" href="{{ url('/home') }}">Retour</a>
                     
             </div>
