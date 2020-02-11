@@ -85,7 +85,7 @@
                 </div>
 
                 <div class="links">
-                    <a href="#">Listes des competences</a>
+                    <a href="{{ url('/skills')}}">Listes des competences</a>
                     <a href="{{ url('/userlist') }}">Listes des utilisateurs</a>
                 </div>
             </div>

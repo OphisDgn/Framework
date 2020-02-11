@@ -21,6 +21,8 @@ Auth::routes();
 
 
 Route::get('/userlist', 'UsersController@liste')->name('usersList');
+Route::get('/skills', 'SkillsController@index')->name('skillsList');
+
 
 Route::get('/users/ad', 'UsersController@add')->name('add');
 Route::get('/users/add', function() {
