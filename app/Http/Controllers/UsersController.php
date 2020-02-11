@@ -65,9 +65,10 @@ class UsersController extends Controller
       return view('userslist', compact('user'));
     }
     
-    public function editliste()
+    public function editliste(Request $request)
     {
       $user = User::all();
+      DB::table('users')->where('lastname', $request->input('lastname'))->update(['name'=>$request->input('name'), 'lastname'=>$request->input('lastname'), 'firstname'=>$request->input('firstname'), 'email'=>$request->input('email')]);
       return view('adduser', compact('user'));
     }
 }
