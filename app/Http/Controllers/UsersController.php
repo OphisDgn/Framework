@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use App\Skill;
+use App\User;
 
 class UsersController extends Controller
 {
@@ -56,6 +57,12 @@ class UsersController extends Controller
       $skis = Skill::all();
       DB::table('skill_user')->where('user_id', $user->id)->where('skill_id', $id)->delete();
       return redirect()->route('users');
+    }
+    
+    public function liste()
+    {
+      $user = User::all();
+      return view('userslist', compact('user'));
     }
     
 }

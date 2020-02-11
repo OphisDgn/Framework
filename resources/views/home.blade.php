@@ -14,10 +14,10 @@
                         </div>
                     @endif
 
-                    Coucou !
-                    
-                    <a class="btn btn-secondary" href="{{ url('/users') }}" >Gestion compet</a>
-                    <a class="btn btn-secondary" href="#" >Users Liste</a>
+                    Coucou ! 
+                    <br />
+                    <a class="btn btn-secondary" href="{{ url('/users') }}" >Informations et competences</a>
+                    <a class="btn btn-secondary" href="{{ url('/userlist') }}" >Users Liste</a>
                 </div>
             </div>
         </div>

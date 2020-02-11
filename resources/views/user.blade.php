@@ -14,8 +14,8 @@
                     <div style="padding: 15px;">
                     <h2> Utilisateur </h2>
                     <p> Id : {{ $user->id }} </p>
-                    <p> First Name : {{ $user->firstname }} </p>
-                    <p> Last Name : {{ $user->lastname }} </p>
+                    <p> First name : {{ $user->firstname }} </p>
+                    <p> Last name : {{ $user->lastname }} </p>
                     <p> E-mail : {{ $user->email }} </p>
                     
                     <h2> Competences </h2>

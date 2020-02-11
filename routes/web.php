@@ -19,8 +19,8 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
 
+Route::get('/userlist', 'UsersController@liste')->name('usersList');
 
 Route::get('/users/ad', 'UsersController@add')->name('add');
 Route::get('/users/add', function() {
@@ -45,4 +45,8 @@ Route::get('/users/{id}/delete', 'UsersController@delet')->name('delete');
 
 
 Route::get('/users', 'UsersController@index')->name('users');
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+
 
