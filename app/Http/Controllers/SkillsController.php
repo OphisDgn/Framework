@@ -31,4 +31,25 @@ class SkillsController extends Controller
         return view('skillslist', compact('skills'));
     }
     
+    public function add(Request $request)
+    {
+        $skills = Skill::all();
+        DB::table('skills')->insert(['nom'=>$request->input('nom'), 'description'=>$request->input('description'), 'src'=>$request->input('source')]);
+        return redirect()->route('skillslist');
+    }
+    
+    public function edit(Request $request)
+    {
+        $skills = Skill::all();
+        DB::table('skills')->where('nom', $request->input('nom'))->update(['description'=>$request->input('description'), 'src'=>$request->input('source')]);
+        return redirect()->route('skillslist');
+    }
+    
+    public function delet($id)
+    {
+        $skills = Skill::all();
+        DB::table('skills')->where('id', $id)->delete();
+        return redirect()->route('skillslist');
+    }
+    
 }

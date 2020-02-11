@@ -9,22 +9,31 @@
                     
                     <a class="btn btn-secondary" href="{{ url('/') }}">Retour</a>
                     <br />
-                    <table style="padding: 10px;">
+                    <a class="btn btn-success" href="{{ route('skillsAdd') }}" style="margin-bottom: 10px;">Ajouter</a>
+                    
+                    <table style="padding: 10px; margin-left: 15px; margin-bottom: 15px;">
                       <tr>
                         <th> Id </th>
                         <th> Name </th>
                         <th> Biography </th>
                         <th> Niveau moyen </th>
+                        <th> Options </th>
                       </tr>
                       @foreach($skills as $sk)
                           <tr>
                             <td> {{ $sk->id }} </td>
                             <td> {{ $sk->nom }} </td>
                             <td> {{ $sk->description }} </td>
+                            <td> </td>
+                            <td>
+                              <a class="btn btn-light" href="{{ route('skillsEdit') }}">Modifier</a>
+                              <a class="btn btn-danger" href="{{ route('destroy', ['id'=>$sk->id]) }}">Supprimer</a>
+                            </td>
                           </tr>
                       @endforeach
                       
                     </table>
+                    
                     
             </div>
         </div>

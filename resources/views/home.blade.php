@@ -14,10 +14,10 @@
                         </div>
                     @endif
 
-                    Coucou ! 
+                    Coucou et bienvenue ! 
                     <br />
-                    <a class="btn btn-secondary" href="{{ url('/users') }}" >Informations et competences</a>
-                    <a class="btn btn-secondary" href="{{ url('/userlist') }}" >Users Liste</a>
+                    <a class="btn btn-secondary" href="{{ url('/users') }}">Informations et competences</a>
+                    <a class="btn btn-secondary" href="{{ url('/userlist') }}">Listes des utilisateurs</a>
                 </div>
             </div>
         </div>

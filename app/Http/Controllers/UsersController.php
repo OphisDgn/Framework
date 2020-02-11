@@ -65,4 +65,9 @@ class UsersController extends Controller
       return view('userslist', compact('user'));
     }
     
+    public function editliste()
+    {
+      $user = User::all();
+      return view('adduser', compact('user'));
+    }
 }
