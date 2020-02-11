@@ -49,7 +49,7 @@ class UsersController extends Controller
       return redirect()->route('users');
     }
     
-    public function delete($id)
+    public function delet($id)
     {
       $user = Auth::user();
       $ski = $user->skills;

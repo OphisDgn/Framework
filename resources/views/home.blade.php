@@ -16,8 +16,8 @@
 
                     Coucou !
                     
-                    <a class="btn btn-dark" href="{{ url('/users') }}" >Gestion compet</a>
-                    <a class="btn btn-dark" href="#" >Users Liste</a>
+                    <a class="btn btn-secondary" href="{{ url('/users') }}" >Gestion compet</a>
+                    <a class="btn btn-secondary" href="#" >Users Liste</a>
                 </div>
             </div>
         </div>
