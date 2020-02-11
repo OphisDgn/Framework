@@ -68,7 +68,7 @@ class UsersController extends Controller
     public function editliste(Request $request)
     {
       $user = User::all();
-      DB::table('users')->where('lastname', $request->input('lastname'))->update(['name'=>$request->input('name'), 'lastname'=>$request->input('lastname'), 'firstname'=>$request->input('firstname'), 'email'=>$request->input('email')]);
+      DB::table('users')->where('lastname', $request->input('lastname'))->update(['name'=>$request->input('name'), 'lastname'=>$request->input('lastname'), 'firstname'=>$request->input('firstname'), 'email'=>$request->input('email'), 'bio'=>$request->input('biography')]);
       return view('adduser', compact('user'));
     }
 }

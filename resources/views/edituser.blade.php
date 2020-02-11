@@ -17,6 +17,8 @@
                         <br />
                         <input type="text" name="email" placeholder="E-mail Address"required style="margin-bottom: 10px; padding: 5px;" value={{$user->email}}>
                         <br />
+                        <input type="text" name="biography" placeholder="Biography"required style="margin-bottom: 10px; padding: 5px;" value={{$user->bio}}>
+                        <br />
                         <input type="submit" name="edit" value="Modifier" style="margin-bottom: 10px;">
                     </form>
                     
