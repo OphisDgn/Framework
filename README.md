@@ -1,20 +1,20 @@
 ---- ReadMe ----
 
-A la suite de votre mail nous expliquant qu'il faudrait joindre le fichier '.bach_history' au projet, j'ai voulu le faire. Cependant, j'ai rencontrÈ des erreurs que je n'ai pas compris.
+A la suite de votre mail nous expliquant qu'il faudrait joindre le fichier '.bach_history' au projet, j'ai voulu le faire. Cependant, j'ai rencontr√© des erreurs que je n'ai pas compris.
 
-J'ai donc rÈalisÈ un "git add ."  puis un "git commit -m "fichier history" " (je ne me rappelle plus le nom que j'ai donnÈ je vous avoue). A la suite de quoi, j'ai eu un message d'erreur du mÍme type que celui-ci : 
+J'ai donc r√©alis√© un "git add ."  puis un "git commit -m "fichier history" " (je ne me rappelle plus le nom que j'ai donn√© je vous avoue). A la suite de quoi, j'ai eu un message d'erreur du m√™me type que celui-ci : 
 
 error: object file .git/objects/31/65329bb680e30595f242b7c4d8406ca63eeab0 is empty
 fatal: loose object 3165329bb680e30595f242b7c4d8406ca63eeab0 (stored in .git/objects/31/65329bb680e30595f242b7c4d8406ca63eeab0) is corrupt
 
 
-Comprenez ma surprise, je n'avais jamais vu cette erreur. Ainsi j'ai cherchÈ sur internet la solution ‡ cela, j'ai trouvÈ un certain Nathan ( sur ce  git https://gist.github.com/yblee85/0614f3021d21e2d47139 ) qui a fait un tuto pour rÈsoudre cette erreur. Je l'ai donc suivi, Ètape par Ètape.
-Cependant, en arrivant ‡ la fin (sans faire les deux derniËres commandes qui visaient ‡ ajouter un exemple), j'ai remarquÈ que cela n'avait pas marchÈ.
+Comprenez ma surprise, je n'avais jamais vu cette erreur. Ainsi j'ai cherch√© sur internet la solution √† cela, j'ai trouv√© un certain Nathan ( sur ce  git https://gist.github.com/yblee85/0614f3021d21e2d47139 ) qui a fait un tuto pour r√©soudre cette erreur. Je l'ai donc suivi, √©tape par √©tape.
+Cependant, en arrivant √† la fin (sans faire les deux derni√®res commandes qui visaient √† ajouter un exemple), j'ai remarqu√© que cela n'avait pas march√©.
 
 Voici ce que j'obtenais en faisant cette commande :
 
 git fsck --full
-VÈrification des rÈpertoires d'objet: 100% (256/256), fait.
+V√©rification des r√©pertoires d'objet: 100% (256/256), fait.
 error: refs/heads/master: invalid sha1 pointer 9cf0a5e7a9628ec670e2aed2c3819ab73f3655f7
 error: refs/remotes/origin/master: invalid sha1 pointer 9cf0a5e7a9628ec670e2aed2c3819ab73f3655f7
 error: HEAD: invalid sha1 pointer 9cf0a5e7a9628ec670e2aed2c3819ab73f3655f7
@@ -32,15 +32,15 @@ Password for 'https://OphisDgn@github.com':
 error: refs/remotes/origin/master ne pointe pas sur un objet valide!
 To https://github.com/OphisDgn/Framework.git
  ! [rejected]        master -> master (fetch first)
-error: impossible de pousser des rÈfÈrences vers 'https://github.com/OphisDgn/Framework.git'
-astuce: Les mises ‡ jour ont ÈtÈ rejetÈes car la branche distante contient du travail que
-astuce: vous n'avez pas en local. Ceci est gÈnÈralement causÈ par un autre dÈpÙt poussÈ
-astuce: vers la mÍme rÈfÈrence. Vous pourriez intÈgrer d'abord les changements distants
-astuce: (par exemple 'git pull ...') avant de pousser ‡ nouveau.
-astuce: Voir la 'Note ‡ propos des avances rapides' dans 'git push --help' pour plus d'information.
+error: impossible de pousser des r√©f√©rences vers 'https://github.com/OphisDgn/Framework.git'
+astuce: Les mises √† jour ont √©t√© rejet√©es car la branche distante contient du travail que
+astuce: vous n'avez pas en local. Ceci est g√©n√©ralement caus√© par un autre d√©p√¥t pouss√©
+astuce: vers la m√™me r√©f√©rence. Vous pourriez int√©grer d'abord les changements distants
+astuce: (par exemple 'git pull ...') avant de pousser √† nouveau.
+astuce: Voir la 'Note √† propos des avances rapides' dans 'git push --help' pour plus d'information.
 
 
-J'ai rÈalisÈ un "git reflog master" comme dit dans un tuto et en voici le rÈsultat :
+J'ai r√©alis√© un "git reflog master" comme dit dans un tuto et en voici le r√©sultat :
 
 error: refs/remotes/origin/master ne pointe pas sur un objet valide!
 1a0a5b4 (HEAD -> master) master@{0}: commit: recuperation du fiasco git
@@ -53,19 +53,21 @@ fff1890 master@{4}: commit: liste user
 973a505 master@{7}: commit: ajout
 755534d master@{8}: commit (initial): first
 
-Et lorsque je veux re-faire un autre git commit cela me dit (j'avais enregistrÈ la version du ReadMe avant de faire ce test) :
+Et lorsque je veux re-faire un autre git commit cela me dit (j'avais enregistr√© la version du ReadMe avant de faire ce test) :
 
 celine@Lieutaud-Laravel:~/framework$ git commit -a -m "essaie commit fiasco"
 Sur la branche master
-Votre branche est basÈe sur 'origin/master', mais la branche amont a disparu.
+Votre branche est bas√©e sur 'origin/master', mais la branche amont a disparu.
   (utilisez "git branch --unset-upstream" pour corriger)
 
 Fichiers non suivis:
         README.md
 
-aucune modification ajoutÈe ‡ la validation mais des fichiers non suivis sont prÈsents
+aucune modification ajout√©e √† la validation mais des fichiers non suivis sont pr√©sents
 
 
-Ainsi je n'ai pas compris pourquoi Áa me faisait cela et j'en suis dÈsolÈe. 
-Je tiens aussi ‡ prÈciser que mes noms de commit sont tout le temps de ce type, je n'arrive pas ‡ me fier aux noms que l'on donne.
+Ainsi je n'ai pas compris pourquoi √ßa me faisait cela et j'en suis d√©sol√©e. 
+Je tiens aussi √† pr√©ciser que mes noms de commit sont tout le temps de ce type, je n'arrive pas √† me fier aux noms que l'on donne.
 
+--- 
+L'historique est disponible sur ce d√©p√¥t git comme indiqu√© dans le mail : https://github.com/OphisDgn/FrameworkPHP
